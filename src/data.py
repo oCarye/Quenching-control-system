@@ -4,7 +4,7 @@ from modules.config import *
 
 def getData(f):
     with open(f,'r') as csv_file:
-        f_dicts=csv.DictReader(csv_file,delimiter=';')
+        f_dicts=csv.DictReader(csv_file,delimiter=';')  #以字典方式读取，分隔符为';'
 
         #将有效数据读入x1,x2,y1,y2；
         x1,y1,x2,y2=[],[],[],[]
