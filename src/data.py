@@ -1,9 +1,9 @@
 import csv
-#from modules.getime import getTime
-#from modules import const
+from modules.gettime import getTime
+from modules.config import *
 
 def getData(f):
-    with open("QT1_1210-15.csv",'r') as csv_file:
+    with open(f,'r') as csv_file:
         f_dicts=csv.DictReader(csv_file,delimiter=';')
 
         #将有效数据读入x1,x2,y1,y2；
