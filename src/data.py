@@ -13,9 +13,10 @@ def getData(f):
             d=next(f_dicts)
         while float(d[rotation_value])>=10:
             x1.append(d[sp_time_1_3])
-            y1.append(d[sp_value_1_3])
+            y1.append((d[sp_value_1_3]))
             x2.append(d[av_time_1_3])
             y2.append(d[av_value_1_3])
             d=next(f_dicts)
-    x1,x2=getTime(x1),getTime(x2)
+    x1,x2=getTime(x1),getTime(x2)  #把横坐标的时间戳转化成相对时间差
+    y1,y2=list(map(float,y1)),list(map(float,y2))
     return x1,x2,y1,y2
